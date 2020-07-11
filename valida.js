@@ -1,3 +1,5 @@
+const minLengthPassword = 4
+
 $('.input-value').focus(e => {
     $(e.target).toggleClass('init-focus')
 }).blur(e => {
@@ -33,7 +35,7 @@ $('#input-password').keyup(e => {
     
     let val = String(e.target.value)
 
-    if(val.length >= 4){
+    if(val.length >= minLengthPassword){
         $(e.target).removeClass('init-focus, error').addClass('success')
     } else {
         $(e.target).removeClass('success').addClass('init-focus')
@@ -41,7 +43,7 @@ $('#input-password').keyup(e => {
 }).blur(e => {
     let val = String(e.target.value)
 
-    if(val.length < 4 && val.length != 0){
+    if(val.length < minLengthPassword && val.length != 0){
         $(e.target).addClass('error')
     }
 })
