@@ -46,7 +46,7 @@ input {
     letter-spacing: 1px;
 }
 
-div.input input.init,.primary,.error {
+div.input input.init,.success,.error {
     background: transparent;
     color: #FFF; 
     padding: 10px 2.5px; 
@@ -56,19 +56,31 @@ div.input input.init,.primary,.error {
     transition: ease 0.25s;
 }
 
-div.input input.init:focus {
+div.input input.init {
+    border-color: #CCC;
+}
+
+div.input input.init-focus {
     border-color: #3079FF;
 }
 
-div.input input.primary:focus {
+/* div.input input.init:focus {
+    border-color: #3079FF;
+} */
+
+div.input input.success {
     border-color: #07E907;
 }
 
-input.error {
+div.input input.success:focus {
+    border-color: #07E907;
+}
+
+div.input input.error {
     border-color: #FF4242;
 }
 
-input.error:focus {
+div.input input.error:focus {
     border-color: #FF4242;
 }
 
